@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:context=".DetailsActivity">
+
+
+        <ImageView
+            android:id="@+id/mealImage"
+            android:layout_width="wrap_content"
+            android:layout_height="300dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.473"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/chburger" />
+
+        <TextView
+            android:id="@+id/mealName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Гамбургер"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mealImage" />
+
+        <TextView
+            android:id="@+id/mealDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="О продукте"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/mealImage"
+            app:layout_constraintTop_toBottomOf="@+id/mealName" />
+
+        <TextView
+            android:id="@+id/mealInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textStyle="italic"
+            android:text="Рубленый бифштекс из натуральной цельной говядины на карамелизованной булочке, заправленной горчицей, кетчупом, луком и кусочком маринованного огурчика."
+            app:layout_constraintStart_toStartOf="@+id/mealDescription"
+            app:layout_constraintTop_toBottomOf="@+id/mealDescription" />
+
+        <TextView
+            android:id="@+id/Composition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Состав"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/mealDescription"
+            app:layout_constraintTop_toBottomOf="@+id/mealInfo" />
+
+        <TextView
+            android:id="@+id/mealComposition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Бифштекс из говядины рубленый, приготовленный на гриле Булочка для гамбургеров, поджаренная в тостере Горчичный соус Лук репчатый резаный восстановленный Огурцы маринованные резанные Приправа для гриля"
+            android:textStyle="italic"
+            app:layout_constraintStart_toStartOf="@+id/mealInfo"
+            app:layout_constraintTop_toBottomOf="@+id/Composition" />
+
+        <TextView
+            android:id="@+id/mealValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Пищевая ценность"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/Composition"
+            app:layout_constraintTop_toBottomOf="@+id/mealComposition" />
+
+        <TextView
+            android:id="@+id/mealValueInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="В порции"
+            android:textStyle="italic"
+            app:layout_constraintStart_toStartOf="@+id/mealComposition"
+            app:layout_constraintTop_toBottomOf="@+id/mealValue" />
+
+        <TextView
+            android:id="@+id/gramm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="150dp"
+            android:text="Вес"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="@+id/mealValueInfo"
+            app:layout_constraintStart_toEndOf="@+id/mealValueInfo" />
+
+        <TextView
+            android:id="@+id/Procent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="%RI"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="@+id/gramm"
+            app:layout_constraintStart_toEndOf="@+id/gramm" />
+
+        <TextView
+            android:id="@+id/jiry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Жиры"
+            app:layout_constraintStart_toStartOf="@+id/mealValueInfo"
+            app:layout_constraintTop_toBottomOf="@+id/mealValueInfo" />
+
+        <TextView
+            android:id="@+id/nasyshJiry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Насыщенные жиры"
+            app:layout_constraintStart_toStartOf="@+id/jiry"
+            app:layout_constraintTop_toBottomOf="@+id/jiry" />
+
+        <TextView
+            android:id="@+id/uglevody"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Углеводы"
+            app:layout_constraintStart_toStartOf="@+id/nasyshJiry"
+            app:layout_constraintTop_toBottomOf="@+id/nasyshJiry" />
+
+        <TextView
+            android:id="@+id/Sugar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Сахар"
+            app:layout_constraintStart_toStartOf="@+id/uglevody"
+            app:layout_constraintTop_toBottomOf="@+id/uglevody" />
+
+        <TextView
+            android:id="@+id/kletchatka"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Клетчатка"
+            app:layout_constraintStart_toStartOf="@+id/Sugar"
+            app:layout_constraintTop_toBottomOf="@+id/Sugar" />
+
+        <TextView
+            android:id="@+id/belki"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Белки"
+            app:layout_constraintStart_toStartOf="@+id/kletchatka"
+            app:layout_constraintTop_toBottomOf="@+id/kletchatka" />
+
+        <TextView
+            android:id="@+id/solt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Соль"
+            app:layout_constraintStart_toStartOf="@+id/belki"
+            app:layout_constraintTop_toBottomOf="@+id/belki" />
+
+        <TextView
+            android:id="@+id/gramJir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="8,5 г"
+            app:layout_constraintBottom_toBottomOf="@+id/jiry"
+            app:layout_constraintEnd_toEndOf="@+id/gramm"
+            app:layout_constraintStart_toStartOf="@+id/gramm"
+            app:layout_constraintTop_toBottomOf="@+id/gramm" />
+
+        <TextView
+            android:id="@+id/gramNasJ"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3,4 г"
+            app:layout_constraintEnd_toEndOf="@+id/gramm"
+            app:layout_constraintStart_toStartOf="@+id/gramm"
+            app:layout_constraintTop_toBottomOf="@+id/gramJir" />
+
+        <TextView
+            android:id="@+id/gramUgl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="30 г"
+            app:layout_constraintEnd_toEndOf="@+id/gramm"
+            app:layout_constraintStart_toStartOf="@+id/gramm"
+            app:layout_constraintTop_toBottomOf="@+id/gramNasJ" />
+
+        <TextView
+            android:id="@+id/gramSahar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="6,4 г"
+            app:layout_constraintEnd_toEndOf="@+id/gramm"
+            app:layout_constraintStart_toStartOf="@+id/gramm"
+            app:layout_constraintTop_toBottomOf="@+id/gramUgl" />
+
+        <TextView
+            android:id="@+id/gramKletch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1,9 г"
+            app:layout_constraintEnd_toEndOf="@+id/gramm"
+            app:layout_constraintStart_toStartOf="@+id/gramm"
+            app:layout_constraintTop_toBottomOf="@+id/gramSahar" />
+
+        <TextView
+            android:id="@+id/gramBelki"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="13 г"
+            app:layout_constraintEnd_toEndOf="@+id/gramm"
+            app:layout_constraintStart_toStartOf="@+id/gramm"
+            app:layout_constraintTop_toBottomOf="@+id/gramKletch" />
+
+        <TextView
+            android:id="@+id/gramSol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1,2 г"
+            app:layout_constraintEnd_toEndOf="@+id/gramm"
+            app:layout_constraintStart_toStartOf="@+id/gramm"
+            app:layout_constraintTop_toBottomOf="@+id/gramBelki" />
+
+        <TextView
+            android:id="@+id/procJir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12%"
+            app:layout_constraintEnd_toEndOf="@+id/Procent"
+            app:layout_constraintStart_toStartOf="@+id/Procent"
+            app:layout_constraintTop_toBottomOf="@+id/Procent" />
+
+        <TextView
+            android:id="@+id/procNasJir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="17%"
+            app:layout_constraintEnd_toEndOf="@+id/Procent"
+            app:layout_constraintStart_toStartOf="@+id/Procent"
+            app:layout_constraintTop_toBottomOf="@+id/procJir" />
+
+        <TextView
+            android:id="@+id/procUglev"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12%"
+            app:layout_constraintEnd_toEndOf="@+id/Procent"
+            app:layout_constraintStart_toStartOf="@+id/Procent"
+            app:layout_constraintTop_toBottomOf="@+id/procNasJir" />
+
+        <TextView
+            android:id="@+id/procSahar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="7%"
+            app:layout_constraintEnd_toEndOf="@+id/Procent"
+            app:layout_constraintStart_toStartOf="@+id/Procent"
+            app:layout_constraintTop_toBottomOf="@+id/procUglev" />
+
+        <TextView
+            android:id="@+id/procKletch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            app:layout_constraintEnd_toEndOf="@+id/Procent"
+            app:layout_constraintStart_toStartOf="@+id/Procent"
+            app:layout_constraintTop_toBottomOf="@+id/procSahar" />
+
+        <TextView
+            android:id="@+id/procBelki"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="26%"
+            app:layout_constraintEnd_toEndOf="@+id/Procent"
+            app:layout_constraintStart_toStartOf="@+id/Procent"
+            app:layout_constraintTop_toBottomOf="@+id/procKletch" />
+
+        <TextView
+            android:id="@+id/procSol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20%"
+            app:layout_constraintEnd_toEndOf="@+id/Procent"
+            app:layout_constraintStart_toStartOf="@+id/Procent"
+            app:layout_constraintTop_toBottomOf="@+id/procBelki" />
+
+        <TextView
+            android:id="@+id/enerCennost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Энерг. ценность"
+            android:textStyle="italic"
+            app:layout_constraintStart_toStartOf="@+id/mealValue"
+            app:layout_constraintTop_toBottomOf="@+id/solt" />
+
+        <TextView
+            android:id="@+id/calory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:text="253 ккал, 1063 кДж"
+            app:layout_constraintStart_toEndOf="@+id/enerCennost"
+            app:layout_constraintTop_toTopOf="@+id/enerCennost" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
